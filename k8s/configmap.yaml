@@ -1,0 +1,26 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: producer-config
+data:
+  PORT: "8080"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: processor-config
+data:
+  PORT: "8081"
+  PRODUCER_HOST: "producer"
+  PRODUCER_PORT: "8080"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: consumer-config
+data:
+  PORT: "8082"
+  PROCESSOR_HOST: "processor"
+  PROCESSOR_PORT: "8081"
+  POLL_INTERVAL_SECONDS: "5"
