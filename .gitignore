@@ -1,0 +1,19 @@
+# AWS CLI installation files
+aws/
+awscliv2.zip
+
+# AWS credentials (NEVER commit these!)
+.aws/
+*.pem
+*.key
+
+# Build artifacts
+producer/producer
+processor/processor
+consumer/consumer
+*.o
+
+# IDE files
+.vscode/
+.idea/
+*.swp
